@@ -15,7 +15,7 @@ const Navbar = () => {
                 break;
             }
             case 'idr': {
-                setCurrency({ name: 'idr', symbol: 'Rp. ' })
+                setCurrency({ name: 'idr', symbol: 'Rp.' })
                 break;
             }
             default: {
@@ -25,9 +25,13 @@ const Navbar = () => {
     }
 
     return (
-        <div className='flex items-center justify-between border-b-2 border-[#3c3c3c] text-[#ddd] py-[20px] px-[10%]'>
+        <div className='
+        flex items-center justify-between border-b-2 border-[#3c3c3c] text-[#ddd] lg:py-[20px] lg:px-[10%]
+        md:py-[20px] md:px-[8%]
+        py-[20px] px-[5%]
+        '>
             <img src={logo} alt="" className='w-[max(12vw,120px)]' />
-            <ul className='flex gap-[40px] list-none'>
+            <ul className='flex gap-[40px] list-none hidden sm:flex '>
                 <li>Home</li>
                 <li>Futures</li>
                 <li>Pricing</li>
@@ -39,7 +43,10 @@ const Navbar = () => {
                     <option value="usd" className='bg-[09005c] text-white'>USD</option>
                     <option value="idr" className='bg-[09005c] text-white'>IDR</option>
                 </select>
-                <button className='flex items-center gap-[10px] py-[10px] px-[25px] rounded-[20px] text-base font-medium text-[#393939] bg-white outline-none '>Sign Up <img src={arrowIcon} alt="" className='w-[13px]' /></button>
+                <button className='
+                flex items-center lg:gap-[10px] lg:py-[10px] lg:px-[25px] rounded-[20px] text-base font-medium text-[#393939] bg-white outline-none 
+                gap-[8px] py-[8px] px-[18px] text-[14px]
+                '>Sign Up <img src={arrowIcon} alt="" className='w-[13px]' /></button>
             </div>
         </div>
 
